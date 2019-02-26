@@ -117,6 +117,10 @@ MemoryGame = function(gs) {
 MemoryGameCard = function(id) {
     this.id=id;
     this.estado="faceDown"; //faceDown: Boca abajo, wait: Esperando, found: Encontrada
+	
+    this.getEstado=function(){
+    	return this.estado;
+    }
 
     this.flip=function(){
         if(this.estado=="faceDown"){ 
