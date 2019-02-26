@@ -63,11 +63,13 @@ MemoryGame = function(gs) {
 
             if(this.estado==="noSelected"){
 
-                this.estado="oneSelected";
+            	if(this.cards[cardID].getEstado()!=="found"){
 
-                this.cards[cardID].flip();
-                this.selectedCard=this.cards[cardID];
+	                this.estado="oneSelected";
 
+	                this.cards[cardID].flip();
+	                this.selectedCard=this.cards[cardID];
+	            }
 
             }else if( this.estado== "oneSelected" && this.cards[cardID]!==this.selectedCard){
 
